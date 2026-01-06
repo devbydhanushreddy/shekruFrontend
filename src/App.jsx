@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import Loader from "./pages/loader";
+import Loader from "./pages/Loader";
 
 // Lazy loaded pages
 const Login = lazy(() => import("./pages/Login"));
-const Otp = lazy(() => import("./pages/OTP"));
+const Otp = lazy(() => import("./pages/Otp"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 export default function App() {
