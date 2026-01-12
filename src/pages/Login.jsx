@@ -16,9 +16,9 @@ export default function Login() {
     setLoading(true);
     try {
       const res = await api.post("/api/auth/login", { email, password });
-      console.log(res.request);
+      console.log("res", res);
 
-      if (res.request.responseURL.includes("/dashboard")) {
+      if (res.status === 205) {
         navigate("/dashboard");
       } else {
         setLoading(false);
